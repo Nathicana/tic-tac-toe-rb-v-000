@@ -95,6 +95,7 @@ end
 end
 
 def play(board)
+  board = [" ", " ", " ", " ", " ", " ", "O", "X", "X"]
 until over?(board)
   turn(board)
 end
