@@ -95,7 +95,7 @@ end
 end
 
 def play(board)
-  
+  board[6] = "O"
 until over?(board)
   turn(board)
 end
