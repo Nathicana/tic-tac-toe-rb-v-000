@@ -12,8 +12,8 @@ def input_to_index(input)
 input = (input.to_i) - 1
 end
 
-def move(board, index, token)
-  board[index] = token
+def move(board, index, value)
+  board[index] = value
 end
 
   def position_taken?(board, index)
@@ -38,7 +38,7 @@ def turn(board)
   index = input_to_index(input)
 
 if valid_move?(board, index)
-  move(board, index, token = "X")
+  move(board, index, value = "X")
   display_board(board)
 else
   turn(board)
@@ -49,7 +49,7 @@ end
 def turn_count(board)
    counter = 0
   board.each do |token|
- if token == "X" || token == "O"
+ if value == "X" || value == "O"
    counter += 1
   end
   end
@@ -89,8 +89,8 @@ end
 end
 
 def winner(board)
-if token = won?(board)
- return board[token[0]]
+if value = won?(board)
+ return board[value[0]]
 end
 end
 
