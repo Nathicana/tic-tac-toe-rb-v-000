@@ -95,7 +95,7 @@ end
 end
 
 def play(board)
-  board = gets
+  play(board) = gets
 until over?(board)
   turn(board)
 end
