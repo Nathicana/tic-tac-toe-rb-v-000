@@ -89,8 +89,8 @@ end
 end
 
 def winner(board)
-if value = won?(board)
- return board[value[0]]
+if token = won?(board)
+ return board[token[0]]
 end
 end
 
